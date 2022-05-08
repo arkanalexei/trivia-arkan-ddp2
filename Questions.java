@@ -26,16 +26,17 @@ public class Questions {
         immutableQuestionAnswer = Collections.unmodifiableMap(questionAnswer);
     }
     
-    // Returns the question and answer for the given question number.
+    // Returns question for the given question number.
     public static String getQuestion(int number) {
         return immutableQuestionAnswer.get(number)[0];
     }
 
+    // Returns the answer for the given question number.
     public static String getAnswer(int number) {
         return immutableQuestionAnswer.get(number)[1];
     }
 
-    // Returns number of question answers
+    // Returns number of question and answers
     public static int getQuestionAnswerCount() {
         return immutableQuestionAnswer.size();
     }

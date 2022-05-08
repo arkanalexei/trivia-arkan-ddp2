@@ -8,10 +8,8 @@ public class Main {
     static Scanner input = new Scanner(System.in);
 
     public static void menu() {
-        
         int command = 0;
         boolean hasChosenExit = false;
-
         while (!hasChosenExit) {
             System.out.println("=============== Silahkan pilih menu! ===============");
             System.out.println("1. Mulai bermain");
@@ -34,12 +32,9 @@ public class Main {
                 System.out.println("=============== Menu tidak dikenal! ===============");
             }
         }
-
-
     }
 
     public static void start() {
-        
         System.out.print("Masukkan nama anda: ");
         String name = input.nextLine();
 
@@ -52,9 +47,9 @@ public class Main {
             }
         }
 
-        if (!found) {
+        if (!found) { // if name is unique
             User user = new User(name);
-            users.add(user);
+            users.add(user); // add to list of users
             int counter = 1;
             while (user.getHealth() > 0) {
                 System.out.println("\n");
@@ -68,22 +63,19 @@ public class Main {
                 System.out.print("Jawab (case insensitive): ");
                 String userAnswer = input.nextLine();
 
-                if (userAnswer.equalsIgnoreCase(answer)) {
+                if (userAnswer.equalsIgnoreCase(answer)) { // case insensitive
                     user.correct();
                     System.out.println("Jawaban anda benar!");
                 } else {
                     user.wrong();
                     System.out.println(String.format("Jawaban yang benar: %s", answer));
                 }
-
                 counter++;
             }
             System.out.println(String.format("Game over! Skor anda: %d", user.getSkor()));
         } else {
             System.out.println("Nama sudah ada di database!");
         }
-
-        
     }
 
     public static void leaderboard() {
@@ -98,11 +90,9 @@ public class Main {
             System.out.println("Leaderboard kosong!");
         }
     }
-    
 
     public static void main(String[] args) {
-        menu();
+        menu(); // start menu
         input.close();
     }
-
 }
