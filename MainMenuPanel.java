@@ -1,6 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-
 public class MainMenuPanel extends SistakaPanel {
     public MainMenuPanel(HomeGUI main){
         super(main);

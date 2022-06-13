@@ -1,5 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class QuestionPanel extends SistakaPanel {
