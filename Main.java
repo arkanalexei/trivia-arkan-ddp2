@@ -3,8 +3,9 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
+
 public class Main {
-    private static ArrayList<User> users = new ArrayList<User>();
+    static ArrayList<User> users = HomeGUI.getUsers();
     static Scanner input = new Scanner(System.in);
 
     public static void menu() {
@@ -91,8 +92,11 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        menu(); // start menu
-        input.close();
-    }
+
+    // Versi COMMAND LINE, uncomment main method ini
+    
+    // public static void main(String[] args) {
+    //     menu(); // start menu
+    //     input.close();
+    // }
 }

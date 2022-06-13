@@ -40,5 +40,15 @@ public class Questions {
     public static int getQuestionAnswerCount() {
         return immutableQuestionAnswer.size();
     }
+
+    // Get answer from question (i feel like there's a better way to write this)
+    public static String getAnswerFromQuestion(String question) {
+        for (int i = 1; i <= getQuestionAnswerCount(); i++) {
+            if (getQuestion(i).equals(question)) {
+                return getAnswer(i);
+            }
+        }
+        return "";
+    }
     
 }

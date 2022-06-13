@@ -2,6 +2,7 @@ public class User implements Comparable<User> {
     private String name;
     private int skor;
     private int health;
+    private int questionCounter = 1;
 
     // user constructor
     public User(String name) {
@@ -33,6 +34,16 @@ public class User implements Comparable<User> {
     // decrement health
     public void wrong() {
         health--;
+    }
+
+    // increment question counter
+    public void incQuestionCounter() {
+        questionCounter++;
+    }
+
+    // get question counter
+    public int getQuestionCounter() {
+        return questionCounter;
     }
 
     // compares user object based on skor
