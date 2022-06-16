@@ -49,7 +49,6 @@ public class HomeGUI {
     }
 
     public void setUser(User user) {
-        //SistakaNG.setPenggunaLoggedIn(user);
         this.user = user;
     }
 
